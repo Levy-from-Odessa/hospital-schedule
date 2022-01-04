@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: #E5E5E5;
+  font-family: Roboto, 'san-serif';
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #484848;
+  line-height: normal;
+
+  text-transform: capitalize;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.header {
+  height: 70px;
+  margin-bottom: 50px;
+
+  display: flex;
+  align-items: center;
+
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-weight: 900;
+    font-size: 36px !important;
+    letter-spacing: 0.05em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 5px;
+      background: #FF7E82;
+
+    }
+
+  }
+
+
+}
+
+
+.card {
+  background: #FFFFFF;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: flex;
+  margin: 30px auto;
+
+  &__content {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0px;
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  &__subtitle {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 3px 0px !important;
+
+  textarea {
+    height: 140px !important;
+  }
+
+  &.dark {
+    label {
+      color: #fff !important;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 10px;
+  background: #fff;
+
+  &:focus-visible {
+    outline: 2px solid black;
+
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 0 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+
+
+
+  &.dark {
+    background: #484848;
+    border: 2px solid #484848;
+    color: #FFFFFF;
+  }
+
+  &.light {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.25);
+  }
+}
