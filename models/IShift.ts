@@ -4,5 +4,5 @@ export interface IShift{
   id: string
   title: string;
   description?: string;
-  dates: Array<ITime>
+  dates: Array<ITime> | string[]
 }

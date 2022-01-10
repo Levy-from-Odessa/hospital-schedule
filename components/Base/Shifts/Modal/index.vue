@@ -61,10 +61,15 @@ export default class extends Vue {
     if (Object.keys(val).length > 0) {
       const shift = {
         ...val,
-        dates: val.dates && val.dates.map(d => d.date)
+        dates: val.dates && val.dates.map((d: ITime | string) => {
+          if (typeof d !== 'string') {
+            return d.date
+          }
+          return d
+        })
       }
       this.formValue = Object.assign({}, shift)
-      this.timesValue = [...val.dates || []]
+      this.timesValue = ([...val.dates || []]) as ITime[]
     } else {
       this.formValue = {} as IShift
       this.timesValue = []
